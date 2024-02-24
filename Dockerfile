@@ -2,8 +2,5 @@ FROM rust:1.67
 
 WORKDIR ~/projects
 
-#COPY . .
+RUN cargo new ipfs_client
 
-#RUN cargo install --path .
-
-#CMD ["myapp"]
