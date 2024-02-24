@@ -4,6 +4,6 @@ WORKDIR /root
 
 RUN git clone https://github.com/OliveiraEdu/rust
 
-WORKDIR /root/projects/ipfs_client
+WORKDIR /root/rust/projects/ipfs_client
 
-RUN cargo check
+#RUN cargo check
