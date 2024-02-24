@@ -5,7 +5,7 @@ name = "ipfs_client"
 version = "0.1.0"
 edition = "2021"
 
-[[package]]
+[[bin]]
 name = "ipfs_client"
 path = "src/main.rs"
 
