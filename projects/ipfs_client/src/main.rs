@@ -1,14 +1,18 @@
 use ipfs_api::{IpfsApi, IpfsClient};
 use std::io::Cursor;
-
-const CLIENT: IpfsClient = IpfsClient::new("http://10.0.0.100:5001");
+use actix_rt::Runtime;
 
 #[actix_rt::main]
-async fn main() {
+async fn main() -> std::io::Result<()> {
+    // Replace "http://localhost:5001" with your actual IPFS node address
+    let client = IpfsClient::new("http://localhost:5001");
     let data = Cursor::new("Hello World!");
 
-    match CLIENT.add(data).await { // Use the const client directly
-        Ok(res) => println!("{}", res.hash),
-        Err(e) => eprintln!("error adding file: {}", e)
-    }
+    let rt = Runtime::new()?;
+
+    let res = rt.block_on(client.add(data)).await?;
+
+    println!("{}", res.hash);
+
+    Ok(())
 }
