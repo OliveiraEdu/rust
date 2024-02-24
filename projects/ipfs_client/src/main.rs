@@ -1,14 +1,13 @@
 use ipfs_api::{IpfsApi, IpfsClient};
 use std::io::Cursor;
 
-let client = IpfsClient::new("http://10.0.0.100:5001");
+const CLIENT: IpfsClient = IpfsClient::new("http://10.0.0.100:5001");
 
 #[actix_rt::main]
 async fn main() {
-    let client = IpfsClient::default();
     let data = Cursor::new("Hello World!");
 
-    match client.add(data).await {
+    match CLIENT.add(data).await { // Use the const client directly
         Ok(res) => println!("{}", res.hash),
         Err(e) => eprintln!("error adding file: {}", e)
     }
