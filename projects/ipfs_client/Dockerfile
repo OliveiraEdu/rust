@@ -17,8 +17,8 @@ RUN cargo build -p iroha_client_cli --release
 
 #WORKDIR /root/projects/ipfs_client
 
-COPY ./configs/client_cli/config.json test_docker/
+#COPY ./configs/client_cli/config.json test_docker/
 
-RUN echo '{"comment":{"String": "Hello Meta!"}}' > test_docker/metadata.json
+#RUN echo '{"comment":{"String": "Hello Meta!"}}' > test_docker/metadata.json
 
-COPY ./target/release/iroha_client_cli test_docker/
+#COPY ./target/release/iroha_client_cli test_docker/
