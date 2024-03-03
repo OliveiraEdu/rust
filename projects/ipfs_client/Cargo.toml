@@ -3,6 +3,18 @@ name = "ipfs_client"
 version = "0.1.0"
 edition = "2021"
 
+<<<<<<< HEAD
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+=======
+[[bin]]
+name = "ipfs_client"
+path = "src/main.rs"
+
+
+[dependencies]
+ipfs-api = "0.17.0"
+ipfs-api-backend-actix = "0.7"
+actix-rt = "2.7.0"
+>>>>>>> 9a7d3979dc8fda95a2bdedbfe331e3f7aba77a88
