@@ -10,6 +10,11 @@ WORKDIR /root/Git/iroha
 
 RUN cargo build -p iroha_client_cli --release
 
+RUN cargo new my_client
+
+WORKDIR /root/Git/iroha/my_client
+
+
 #/projects
 
 #RUN cargo new ipfs_client
