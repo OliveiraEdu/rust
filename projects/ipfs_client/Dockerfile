@@ -12,9 +12,9 @@ RUN cargo build -p iroha_client_cli --release
 
 RUN cargo new my_client
 
-COPY Cargo_iroha.toml /root/Git/iroha/
+COPY Cargo_iroha.toml /root/Git/iroha/Cargo.toml
 
-COPY Cargo_my_client.toml /root/Git/iroha/my_client/
+COPY Cargo_my_client.toml /root/Git/iroha/my_client/Cargo.toml
 
 WORKDIR /root/Git/iroha/my_client
 
