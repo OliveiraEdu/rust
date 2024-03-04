@@ -14,6 +14,8 @@ RUN cargo new my_client
 
 COPY Cargo_iroha.toml /root/Git/iroha/Cargo.toml
 
+COPY config.json /root/Git/iroha/configs/client_cli/
+
 COPY Cargo_my_client.toml /root/Git/iroha/my_client/Cargo.toml
 
 WORKDIR /root/Git/iroha/my_client
