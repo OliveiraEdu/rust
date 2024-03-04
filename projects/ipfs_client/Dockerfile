@@ -20,6 +20,8 @@ COPY Cargo_my_client.toml /root/Git/iroha/my_client/Cargo.toml
 
 WORKDIR /root/Git/iroha/my_client
 
+RUN cargo run
+
 #Notes
 #It is necessary to update /root/Git/iroha/Cargo.toml to include "my_client" in the workspaces section
 #It is necessary to update the dependencies of the /root/Git/iroha/my_client/Cargo.toml, copy from /root/Git/iroha/client_cli/Cargo.toml
