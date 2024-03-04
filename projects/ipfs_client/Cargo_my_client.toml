@@ -10,3 +10,5 @@ iroha_client = { version = "=2.0.0-pre-rc.9", path = "../client" }
 iroha_data_model = { version = "=2.0.0-pre-rc.9", path = "../data_model" }
 iroha_crypto = { version = "=2.0.0-pre-rc.9", path = "../crypto" }
 iroha_config = { version = "=2.0.0-pre-rc.9", path = "../config" }
+serde = { version = "1.0.159", features = ["derive"] }
+serde_json = { version = "1.0.95", features = ["arbitrary_precision"] }
