@@ -1,0 +1,48 @@
+[workspace]
+resolver = "2"
+members = [
+  "actor",
+  "actor/derive",
+  "cli",
+  "cli/derive",
+  "client",
+  "client_cli",
+  "config",
+  "config/base",
+  "config/base/derive",
+  "core",
+  "core/test_network",
+  "crypto",
+  "data_model",
+  "primitives",
+  "ffi",
+  "ffi/derive",
+  "futures",
+  "futures/derive",
+  "logger",
+  "macro",
+  "macro/derive",
+  "my_client",
+  "p2p",
+  "permissions_validators",
+  "schema",
+  "schema/derive",
+  "schema/gen",
+  "substrate",
+  "telemetry",
+  "tools/kagami",
+  "tools/kura_inspector",
+  "tools/parity_scale_decoder",
+  "version",
+  "version/derive",
+]
+
+
+[profile.deploy]
+inherits = "release"
+opt-level = 3
+debug = false
+strip = "symbols"
+debug-assertions = false
+lto = true
+incremental = false
