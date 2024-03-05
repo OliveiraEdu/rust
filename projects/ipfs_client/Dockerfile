@@ -4,7 +4,7 @@ RUN apt install -y nano
 
 WORKDIR /root/Git
 
-RUN git clone https://github.com/hyperledger/iroha.git --branch iroha2-lts
+RUN git clone https://github.com/OliveiraEdu/iroha.git --branch iroha2-lts
 
 WORKDIR /root/Git/iroha
 
